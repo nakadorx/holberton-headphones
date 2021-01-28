@@ -26,9 +26,9 @@
   --color-light-grey: #f3f3f3;
   --color-dark-grey: #353535;
   --text-color: var(--color-black);
-  --font-family-base: 'Open Sans', 'Helvetica Neue', Helvetica, Arial,
+  --font-family-base: "Open Sans", "Helvetica Neue", Helvetica, Arial,
     sans-serif;
-  --font-family-title: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-family-title: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-size-small: 1.2rem;
   --font-size-medium: 1.6rem;
   --font-size-large: 1.8rem;
@@ -75,7 +75,7 @@ body {
   font-size: var(--font-size-medium);
   font-weight: var(--font-weight-regular);
   text-align: center;
-  background-image: url('images/headphones_hero_1.jpg');
+  background-image: url("images/headphones_hero_1.jpg");
   background-repeat: no-repeat;
   height: 100%;
   background-position: center;
@@ -176,7 +176,7 @@ a {
   display: none;
 }
 #side-menu-check-btn-on:checked ~ .sidebar-menu {
-  display: block;
+  display: block !important;
 }
 #side-menu-check-btn-on:checked ~ .side-menu-btn-off {
   display: block;
@@ -185,15 +185,16 @@ a {
   display: none;
 }
 #side-menu-check-btn-off:checked ~ .sidebar-menu {
-  display: none;
+  display: none !important;
 }
 #side-menu-check-btn-off:checked ~ .side-menu-btn-off {
   display: none;
 }
 #side-menu-check-btn-off:checked ~ .side-menu-btn-on {
-  display: block;
+  display: block !important;
 }
 @media (max-width: 1390px) {
+  /* Tablet */
   .head {
     width: 80%;
     margin-left: auto !important;
@@ -204,8 +205,23 @@ a {
   side-menu-btn-off {
     display: none !important;
   }
+  .sidebar-menu {
+    display: none !important;
+  }
+  /* part2 */
+  .boxes {
+    display: grid;
+    grid-template-areas:
+      "it1 it2"
+      "it3 it4" !important;
+    grid-gap: 10px;
+    padding: 10px;
+    width: 80%;
+    margin: auto;
+  }
 }
 @media (min-width: 1391px) {
+  /* PC */
   .side-menu-btn-on,
   side-menu-btn-off {
     display: none !important;
@@ -216,8 +232,12 @@ a {
     margin: auto;
     padding-top: 3rem;
   }
+  .sidebar-menu {
+    display: none !important;
+  }
 }
 @media (max-width: 768px) {
+  /* Mobile*/
   nav {
     margin-top: 2rem;
     display: inline;
@@ -249,9 +269,26 @@ a {
     transition: max-height 0.2s ease-out;
   }
   .head {
-    margin-top: 15rem;
+    margin-top: 20rem;
     margin-left: auto !important;
     margin-right: auto !important;
+  }
+  /* Part II */
+
+  main {
+    margin-top: 1rem !important;
+  }
+  .boxes {
+    display: grid;
+    grid-template-areas:
+      "it1"
+      "it2"
+      "it3 "
+      "it4" !important;
+    grid-gap: 10px;
+    padding: 10px;
+    width: 80%;
+    margin: auto;
   }
 }
 /* Part II */
@@ -261,7 +298,7 @@ main {
 }
 main > div > h1 {
   color: var(--color-black);
-  font-family: var(--font-family-title);
+  font-family: 900px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -270,4 +307,28 @@ main > div > h1 {
 main > div > p {
   width: 80%;
   margin: auto;
+}
+.item1 {
+  grid-area: it1;
+}
+.item2 {
+  grid-area: it2;
+}
+.item3 {
+  grid-area: it3;
+}
+.item4 {
+  grid-area: it4;
+}
+.boxes {
+  display: grid;
+  grid-template-areas: "it1 it2 it3 it4";
+  grid-gap: 10px;
+  padding: 10px;
+  width: 80%;
+  margin: auto;
+}
+.wut-wedo-icon {
+  font-size: 80px;
+  color: var(--color-primary);
 }
