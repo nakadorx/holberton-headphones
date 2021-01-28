@@ -193,6 +193,112 @@ a {
 #side-menu-check-btn-off:checked ~ .side-menu-btn-on {
   display: block !important;
 }
+/* Part II */
+
+.what-we-do {
+  padding-top: 35rem;
+}
+.what-we-do > div > h1 {
+  color: var(--color-black);
+  font-family: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: xx-large;
+}
+.what-we-do > div > p {
+  width: 80%;
+  margin: auto;
+}
+.item1 {
+  grid-area: it1;
+}
+.item2 {
+  grid-area: it2;
+}
+.item3 {
+  grid-area: it3;
+}
+.item4 {
+  grid-area: it4;
+}
+.boxes {
+  display: grid;
+  grid-template-areas: "it1 it2 it3 it4";
+  grid-gap: 10px;
+  padding: 10px;
+  width: 80%;
+  margin: auto;
+}
+.wut-wedo-icon {
+  font-size: 80px;
+  color: var(--color-primary);
+}
+/* part3 */
+.our-result {
+  background-image: url("images/headphones_hero_2.jpg");
+  color: var(--text-color);
+  text-align: center;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 7rem;
+}
+.our-result > div {
+  padding-top: 10rem !important;
+  padding-bottom: 10rem;
+}
+.our-result > div > h1 {
+  color: var(--color-white);
+  font-size: xx-large;
+  font-family: var(--font-family-title);
+}
+.our-result > div > p {
+  color: var(--color-white);
+  width: 80%;
+  margin: auto;
+}
+.s-item {
+  background-image: url("images/pentagone.png");
+  text-align: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 20rem;
+}
+.s-item1 {
+  grid-area: sit1;
+}
+.s-item2 {
+  grid-area: sit2;
+}
+.s-item3 {
+  grid-area: sit3;
+}
+.s-item4 {
+  grid-area: sit4;
+}
+.shapes {
+  display: grid;
+  grid-template-areas: "sit1 sit2 sit3 sit4";
+  grid-gap: 10px;
+  padding: 10px;
+  width: 80%;
+  margin: auto;
+}
+.s-item > h1 {
+  color: var(--color-white);
+  font-size: 5rem;
+  font-weight: bold;
+  position: relative;
+  top: 1rem;
+}
+.s-item > p {
+  position: relative;
+  top: -3rem;
+  color: var(--color-white);
+}
+
 @media (max-width: 1390px) {
   /* Tablet */
   .head {
@@ -214,6 +320,15 @@ a {
     grid-template-areas:
       "it1 it2"
       "it3 it4" !important;
+    grid-gap: 10px;
+    padding: 10px;
+    width: 80%;
+    margin: auto;
+  }
+  /* PART III */
+  .shapes {
+    display: grid;
+    grid-template-areas: "sit1 sit2" "sit3 sit4";
     grid-gap: 10px;
     padding: 10px;
     width: 80%;
@@ -290,45 +405,13 @@ a {
     width: 80%;
     margin: auto;
   }
-}
-/* Part II */
-
-.what-we-do {
-  padding-top: 35rem;
-}
-.what-we-do > div > h1 {
-  color: var(--color-black);
-  font-family: 900px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  font-size: xx-large;
-}
-.what-we-do > div > p {
-  width: 80%;
-  margin: auto;
-}
-.item1 {
-  grid-area: it1;
-}
-.item2 {
-  grid-area: it2;
-}
-.item3 {
-  grid-area: it3;
-}
-.item4 {
-  grid-area: it4;
-}
-.boxes {
-  display: grid;
-  grid-template-areas: "it1 it2 it3 it4";
-  grid-gap: 10px;
-  padding: 10px;
-  width: 80%;
-  margin: auto;
-}
-.wut-wedo-icon {
-  font-size: 80px;
-  color: var(--color-primary);
+  /* PART III */
+  .shapes {
+    display: grid;
+    grid-template-areas: "sit1" "sit2" "sit3" "sit4";
+    grid-gap: 10px;
+    padding: 10px;
+    width: 80%;
+    margin: auto;
+  }
 }
